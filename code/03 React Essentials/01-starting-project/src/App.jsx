@@ -3,6 +3,7 @@ import { CORE_CONCEPTS } from "./data.js";
 // with default export, names can be changed in import statement
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/Coreconcept.jsx";
+import TabButton from "./components/TabButton.jsx";
 
 function App() {
   return (
@@ -29,6 +30,17 @@ function App() {
               img={CORE_CONCEPTS[3].image}
             />
           </ul>
+        </section>
+
+        <section id="examples">
+          <h2>Examples</h2>
+           {/* menu -> create list of buttons */}
+          <menu>
+          <TabButton>{CORE_CONCEPTS[0].title}</TabButton>
+          <TabButton>{CORE_CONCEPTS[1].title}</TabButton>
+          <TabButton>{CORE_CONCEPTS[2].title}</TabButton>
+          <TabButton>{CORE_CONCEPTS[3].title}</TabButton>
+          </menu>
         </section>
       </main>
     </div>
