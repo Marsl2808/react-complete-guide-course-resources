@@ -1,25 +1,25 @@
 // import { apiKey } from "./util.js";
 
 // import apiKey from "./util.js";
-// import { apiKey, abc as content } from "./util.js";
+import { apiKey, abc as content } from "./util.js";
 // import * as util from "./util.js";
 
-// console.log(util.apiKey);
-// console.log(content);
+console.log(apiKey); // util.apiKey
+console.log(content);
 
-// const userMessage = "Hello World!!!";
+const userMessage = "Hello World!!!";
 
-// console.log(userMessage);
-// console.log(userMessage);
+console.log(userMessage);
 
-// function createGreeting(userName, message = "Hello!") {
-// console.log(userName);
-// console.log(message);
-//   return "Hi, I am " + userName + ". " + message;
-// }
+function createGreeting(userName, message = "Hello!") {
+  console.log("\n", "---Greeting---");
+  console.log(userName);
+  console.log(message);
+  return "Hi, I am " + userName + ". " + message;
+}
 
-// const greeting1 = createGreeting("Max");
-// console.log(greeting1);
+const greeting1 = createGreeting("Max");
+console.log(greeting1);
 
 // const greeting2 = createGreeting("Manuel", "Hello, what's up?");
 // console.log(greeting2);
@@ -29,61 +29,61 @@
 //   return userName + message;
 // };
 
-// const user = {
-//   name: "Max",
-//   age: 34,
-//   greet() {
-//     console.log("Hello!");
-//     console.log(this.age);
-//   }
-// };
+const user = {
+  name: "Max",
+  age: 34,
+  greet() {
+    console.log("Hello!");
+    console.log(this.age);
+  }
+};
 
-// console.log(user.name);
-// user.greet();
+console.log(user.name);
+user.greet();
 
-// class User {
-//   constructor(name, age) {
-//     this.name = name;
-//     this.age = age;
-//   }
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 
-//   greet() {
-//     console.log("Hi!");
-//   }
-// }
+  greet() {
+    console.log("Hi!");
+  }
+}
 
-// const user1 = new User("Manuel", 35);
-// console.log(user1);
-// user1.greet();
+const user1 = new User("Manuel", 35);
+console.log("\n", user1);
+user1.greet();
 
-// const hobbies = ["Sports", "Cooking", "Reading"];
-// console.log(hobbies[0]);
+const hobbies = ["Sports", "Cooking", "Reading"];
+console.log("\n", "--- arrays ---", "\n", hobbies[0]);
 
-// hobbies.push("Working");
-// console.log(hobbies);
+hobbies.push("Working");
+console.log(hobbies);
 
-// const index = hobbies.findIndex((item) => item === "Sports");
+const index = hobbies.findIndex((item) => item === "Sports");
 
-// console.log(index);
+console.log(index);
 
-// const editedHobbies = hobbies.map((item) => ({ text: item }));
-// console.log(editedHobbies);
+const editedHobbies = hobbies.map((item) => ({ text: item }));
+console.log(editedHobbies);
 
-// const [firstName, lastName] = ["Max", "Schwarzmüller"];
+const [firstName, lastName] = ["Max", "Schwarzmüller"];
 
 // const firstName = userNameData[0];
 // const lastName = userNameData[1];
 
-// console.log(firstName);
-// console.log(lastName);
+console.log(firstName);
+console.log(lastName);
 
-// const { name: userName, age } = {
-//   name: "Max",
-//   age: 34
-// };
+const { name: userName, age } = {
+  name: "Max",
+  age: 34
+};
 
-// console.log(userName);
-// console.log(age);
+console.log(userName);
+console.log(age);
 
 // const name = user.name;
 // const age = user.age;
@@ -150,7 +150,7 @@
 
 // const message = “Hello”;
 
-const hobbies = ["Sports", "Cooking"];
-// hobbies = [];
-hobbies.push("Working");
-console.log(hobbies);
+// const hobbies = ["Sports", "Cooking"];
+// // hobbies = [];
+// hobbies.push("Working");
+// console.log(hobbies);
