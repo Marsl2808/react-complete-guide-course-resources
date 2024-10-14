@@ -6,6 +6,9 @@ import CoreConcept from "./components/Coreconcept.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
+  function handleClick(selectedButton) {
+    console.log(selectedButton);
+  }
   return (
     <div>
       <Header />
@@ -34,12 +37,20 @@ function App() {
 
         <section id="examples">
           <h2>Examples</h2>
-           {/* menu -> create list of buttons */}
+          {/* menu -> create list of buttons */}
           <menu>
-          <TabButton>{CORE_CONCEPTS[0].title}</TabButton>
-          <TabButton>{CORE_CONCEPTS[1].title}</TabButton>
-          <TabButton>{CORE_CONCEPTS[2].title}</TabButton>
-          <TabButton>{CORE_CONCEPTS[3].title}</TabButton>
+            <TabButton click={() => handleClick("components")}>
+              {CORE_CONCEPTS[0].title}
+            </TabButton>
+            <TabButton click={() => handleClick("jsx")}>
+              {CORE_CONCEPTS[1].title}
+            </TabButton>
+            <TabButton click={() => handleClick("props")}>
+              {CORE_CONCEPTS[2].title}
+            </TabButton>
+            <TabButton click={() => handleClick("state")}>
+              {CORE_CONCEPTS[3].title}
+            </TabButton>
           </menu>
         </section>
       </main>
