@@ -1,14 +1,23 @@
+// hooks
+import { useState } from "react";
+
 // named-exports need to be imported with curly braces
 import { CORE_CONCEPTS } from "./data.js";
 // with default export, names can be changed in import statement
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/Coreconcept.jsx";
 import TabButton from "./components/TabButton.jsx";
+import React from "react";
+import { EXAMPLES } from "./data.js";
 
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState("components");
+
   function handleClick(selectedButton) {
-    console.log(selectedButton);
+    setSelectedTopic(selectedButton);
+    console.log(selectedTopic);
   }
+
   return (
     <div>
       <Header />
@@ -52,6 +61,13 @@ function App() {
               {CORE_CONCEPTS[3].title}
             </TabButton>
           </menu>
+          <div id="tab-content">
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
