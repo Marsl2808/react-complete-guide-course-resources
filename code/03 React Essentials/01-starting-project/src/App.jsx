@@ -1,14 +1,14 @@
 // hooks
-import { useState } from "react";
+import { useState, React } from "react";
+// import React from "react";
 
 // named-exports need to be imported with curly braces
-import { CORE_CONCEPTS } from "./data.js";
+import { CORE_CONCEPTS, EXAMPLES } from "./data.js";
 // with default export, names can be changed in import statement
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/Coreconcept.jsx";
 import TabButton from "./components/TabButton.jsx";
-import React from "react";
-import { EXAMPLES } from "./data.js";
+
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState("components");
@@ -22,6 +22,7 @@ function App() {
     <div>
       <Header />
       <main>
+        {/* components, jsx, props */}
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
@@ -44,6 +45,7 @@ function App() {
           </ul>
         </section>
 
+        {/* ...(core-concepts) + state */}
         <section id="examples">
           <h2>Examples</h2>
           {/* menu -> create list of buttons */}
